@@ -1,0 +1,36 @@
+# Private build of the wf-shell fork (dock launchers), built from the working tree
+# this PKGBUILD lives in, including uncommitted changes. Run makepkg in pkg/.
+# Replaces the Arch wf-shell package. pacman never updates it, so rebase the fork
+# and rebuild when upstream releases. Bump pkgrel for rebuilds without a new commit.
+
+pkgname=wf-shell-mk
+_repo=$(realpath "$startdir/..")
+pkgver=0.11.0.r19.gacb62e1
+pkgrel=1
+pkgdesc='GTK4-based panel, dock, background and locker for Wayfire (with dock launchers)'
+arch=(aarch64 x86_64)
+url='https://github.com/WayfireWM/wf-shell'
+license=(MIT)
+depends=(alsa-lib cairomm-1.16 ddcutil glib2 glibc glibmm-2.68 gtk4 gtk4-layer-shell
+         gtkmm-4.0 hicolor-icon-theme libdbusmenu-glib libdrm libepoxy libgcc libpulse
+         libsigc++-3.0 libstdc++ libwireplumber libxkbcommon mesa openssl pam
+         'wayfire>=0.11.0' wayland 'wf-config>=0.11.0' yyjson)
+makedepends=(git glib2-devel meson wayland-protocols)
+provides=("wf-shell=${pkgver%%.r*}")
+conflicts=(wf-shell)
+backup=(etc/pam.d/wf-locker)
+
+pkgver() {
+  git -C "$_repo" describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+build() {
+  arch-meson "$_repo" build -Dweather=false
+  meson compile -C build
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+  install -Dm644 "$_repo/LICENSE" -t "$pkgdir/usr/share/licenses/$pkgname"
+  install -Dm644 "$_repo/wf-shell.ini.example" -t "$pkgdir/usr/share/doc/$pkgname"
+}
