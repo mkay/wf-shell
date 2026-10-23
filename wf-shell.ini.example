@@ -401,6 +401,14 @@ commands_output_max_chars = 10
 # if dock should autohide. Default true
 autohide = true
 
+# applications pinned left of the running apps, in this order.
+# desktop file ids (with or without .desktop), absolute .desktop paths,
+# or names of custom launchers defined with launcher_cmd_<name>
+# launchers = firefox org.gnome.Nautilus foot notes
+# launcher_cmd_notes = gnome-text-editor
+# launcher_icon_notes = accessories-text-editor
+# launcher_label_notes = Notes
+
 # time in milliseconds to wait before hiding
 # autohide_duration = 300
 
