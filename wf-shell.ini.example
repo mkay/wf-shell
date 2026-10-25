@@ -409,6 +409,17 @@ autohide = true
 # launcher_icon_notes = accessories-text-editor
 # launcher_label_notes = Notes
 
+# a button left of the launchers which pops up a list of folders.
+# places: ~, ~/path, /path, URIs (file:// for paths with spaces), or
+# "bookmarks" for the GTK bookmarks; empty means "~ bookmarks".
+# the file manager command gets the folder URI appended; empty uses
+# the default handler for folders
+# places_button = false
+# places = ~ ~/Downloads bookmarks
+# places_file_manager = nautilus --new-window
+# places_icon = folder
+# places_label = Places
+
 # time in milliseconds to wait before hiding
 # autohide_duration = 300
 
