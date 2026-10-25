@@ -419,6 +419,7 @@ autohide = true
 # places = ~ ~/Downloads bookmarks
 # places_file_manager = nautilus --new-window
 # places_icon = folder
+# places_icon_size = 24
 # places_label = Places
 
 # time in milliseconds to wait before hiding
