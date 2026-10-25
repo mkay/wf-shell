@@ -5,8 +5,8 @@
 
 pkgname=wf-shell-mk
 _repo=$(realpath "$startdir/..")
-pkgver=0.11.0.r20.g2b3bcb4
-pkgrel=2
+pkgver=0.11.0.r25.ga60d4fc
+pkgrel=1
 pkgdesc='GTK4-based panel, dock, background and locker for Wayfire (with dock launchers)'
 arch=(aarch64 x86_64)
 url='https://github.com/WayfireWM/wf-shell'
