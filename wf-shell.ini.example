@@ -409,7 +409,8 @@ autohide = true
 # launcher_icon_notes = accessories-text-editor
 # launcher_label_notes = Notes
 
-# a button left of the launchers which pops up a list of folders.
+# a button left of the launchers which pops up a list of folders;
+# a middle click opens the first one directly.
 # places: ~, ~/path, /path, URIs (file:// for paths with spaces), or
 # "bookmarks" for the GTK bookmarks; empty means "~ bookmarks".
 # the file manager command gets the folder URI appended; empty uses
