@@ -15,9 +15,9 @@ The `dock-launchers` branch is the default branch and holds all changes, rebased
 - **Config hot-reload** keeps working after a reload.
 - `examples/dock-indicator.css` draws an active-app line under the icons.
 
-All options are declared in `metadata/dock.xml`, so WCM keeps them when it saves `wf-shell.ini`.
+All options are declared in `metadata/dock.xml`, so WCM keeps them when it saves `wf-shell.ini`. See `wf-shell.ini.example` for the `[dock]` section.
 
-![The dock settings in WCM](gallery/dock-wcm.png) See `wf-shell.ini.example` for the `[dock]` section.
+![The dock settings in WCM](gallery/dock-wcm.png)
 
 ## Building
 
