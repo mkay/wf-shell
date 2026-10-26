@@ -2,6 +2,8 @@
 
 This is a personal fork of [WayfireWM/wf-shell](https://github.com/WayfireWM/wf-shell). It only changes `wf-dock`; everything else is upstream as it is. The fork is not meant for upstream, so please don't send these changes there.
 
+![The dock with pinned launchers and the places popover](gallery/dock-places.png)
+
 The `dock-launchers` branch is the default branch and holds all changes, rebased onto upstream release tags (currently v0.11.0). `master` tracks upstream unchanged.
 
 ## What is different
@@ -13,7 +15,9 @@ The `dock-launchers` branch is the default branch and holds all changes, rebased
 - **Config hot-reload** keeps working after a reload.
 - `examples/dock-indicator.css` draws an active-app line under the icons.
 
-All options are declared in `metadata/dock.xml`, so WCM keeps them when it saves `wf-shell.ini`. See `wf-shell.ini.example` for the `[dock]` section.
+All options are declared in `metadata/dock.xml`, so WCM keeps them when it saves `wf-shell.ini`.
+
+![The dock settings in WCM](gallery/dock-wcm.png) See `wf-shell.ini.example` for the `[dock]` section.
 
 ## Building
 
