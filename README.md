@@ -1,5 +1,7 @@
 # wf-shell
 
+> This is a personal fork with pinned launchers for `wf-dock`. See [FORK.md](FORK.md) for what is different.
+
 ![Default look](/gallery/default.png)
 
 wf-shell is a repository which contains various components that can be used to build a fully functional desktop based around wayfire:
